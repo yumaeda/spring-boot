@@ -1,7 +1,6 @@
 # CentOS 7
 
 ## 1. Install JDK
-Execute below commands to install Gradle and all the dependencies.
 
 ```bash
 sudo yum -y install epel-release
