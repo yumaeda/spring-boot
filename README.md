@@ -12,15 +12,15 @@ sudo yum install java-1.8.0-openjdk-devel
 
 ## Gradle Wrapper
 
-### 1. Build
-The first time you run the wrapper for a specified version of Gradle, it downloads and caches the Gradle binaries for that version. 
+### A. Build & Run
+
+```bash
+./gradlew bootRun
+```
+### B. Build & Run
 
 ```bash
 ./gradlew build
-```
-### 2. Run
-
-```bash
 ./gradlew run
 ```
 
