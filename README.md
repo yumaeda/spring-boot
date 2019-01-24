@@ -56,4 +56,4 @@ jar tvf build/libs/gs-gradle-0.1.0.jar
 ```
 
 ## Next
-[Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
+[Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)  
