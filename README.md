@@ -57,3 +57,19 @@ jar tvf build/libs/gs-gradle-0.1.0.jar
 
 ## Next
 [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)  
+
+## Installing Docker and Docker-Compose
+https://github.com/NaturalHistoryMuseum/scratchpads2/wiki/Install-Docker-and-Docker-Compose-(Centos-7)
+
+## Docker Commands
+
+```bash
+# Remove all the unused volumes.
+docker volume prune
+
+# Remove all the unused images.
+docker image prune
+
+# Remove all the unused containers.
+docker container prune
+```
