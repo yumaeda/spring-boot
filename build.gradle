@@ -20,7 +20,7 @@ repositories {
 
 // tag::bootJar[]
 bootJar {
-    baseName = 'gs-rest-service'
+    baseName = 'gs-accessing-data-mysql'
     version =  '0.1.0'
 }
 // end::bootJar[]
@@ -31,6 +31,13 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+
+    // JPA Data (We are going to use Repositories, Entities, Hibernate, etc...)
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Use MySQL Connector-J
+    compile 'mysql:mysql-connector-java'
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 // end::dependencies[]
