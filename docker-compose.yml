@@ -1,6 +1,42 @@
 version: '3.6'
 services:
+
+    web:
+        container_name: nginx
+        build:
+            context: ./
+            dockerfile: .docker/web/Dockerfile
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
+        ports:
+            - 80:8080
+        networks:
+            - sb_network
+        depends_on:
+            - app
+
+    app:
+        container_name: spring_boot
+        build:
+            context: ./
+            dockerfile: .docker/app/Dockerfile
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
+        environment:
+            - 'DB_PORT=3306'
+            - 'DB_HOST=database'
+        expose:
+            - 8090
+        command: './gradlew bootRun'
+        networks:
+            - sb_network
+        depends_on:
+            - database
+
     database:
+        container_name: mariadb
         image: mariadb:latest
         volumes:
           - dbdata:/var/lib/mysql
@@ -11,6 +47,13 @@ services:
             - 'MYSQL_ROOT_PASSWORD=secret'
         ports:
             - '3306:3306'
+        networks:
+            - sb_network
+
+networks:
+    sb_network:
+          driver: bridge
 
 volumes:
     dbdata:
+
