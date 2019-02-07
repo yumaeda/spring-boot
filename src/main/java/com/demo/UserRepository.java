@@ -1,7 +1,7 @@
-package demo;
+package com.demo;
 
 import org.springframework.data.repository.CrudRepository;
-import demo.User;
+import com.demo.User;
 
 public interface UserRepository extends CrudRepository<User, Integer> {
 }

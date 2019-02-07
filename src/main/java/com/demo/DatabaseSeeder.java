@@ -1,10 +1,10 @@
-package demo;
+package com.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import demo.User;
-import demo.UserRepository;
+import com.demo.User;
+import com.demo.UserRepository;
 
 @Component
 public class DatabaseSeeder implements CommandLineRunner {
