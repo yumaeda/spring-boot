@@ -31,7 +31,6 @@ sudo yum install java-1.8.0-openjdk-devel
 ```bash
 jar tvf build/libs/xxx.jar
 ```
-
 ## Next
-[Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)  
+[React.js and Spring Data REST](https://spring.io/guides/tutorials/react-and-spring-data-rest/)
 

@@ -3,8 +3,8 @@ package com.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import com.demo.User;
-import com.demo.UserRepository;
+import com.demo.entities.User;
+import com.demo.repositories.UserRepository;
 
 @Component
 public class DatabaseSeeder implements CommandLineRunner {
